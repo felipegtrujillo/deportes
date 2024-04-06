@@ -162,7 +162,7 @@ btnConsulta.addEventListener("click", async function (event) {
         const data = await response.json();
     
          try { (data.status === "ok") 
-          alert("entreo ok");
+        console.log("Registro editado correcta.");
        
         } catch(error) {
           console.log("No se pudo guardar el deporte", data.error);
@@ -211,7 +211,6 @@ btnConsulta.addEventListener("click", async function (event) {
         console.log("Hubo un error:", error);
         // Aquí puedes manejar el error de acuerdo a tus necesidades, como mostrar un mensaje al usuario
       }
-    
   });
 
 

@@ -65,7 +65,6 @@ app.post("/agregarDeporte",checkFile, (req, res) => {
   }
 });
 
-
 app.get("/consultaDeportes",checkFile, (req, res) => {
   
   if(req.archivoExiste) {
