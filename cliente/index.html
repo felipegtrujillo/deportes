@@ -1,0 +1,107 @@
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <script defer src="assets/js/index.js"></script>
+</head>
+
+<body>
+  
+<div class="container">
+
+  <h1>Deportes</h1>
+  <div action="/agregar" class="border rounded p-4">
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Nombre</label>
+
+      <div class="col-sm-10">
+        <input id="nombre" type="text" class="form-control" name="nombre" />
+      </div>
+    </div>
+    <div class="form-group row">
+      <label class="col-sm-2 col-form-label">Precio</label>
+
+      <div class="col-sm-10">
+        <input id="precio" type="text" class="form-control" precio="precio" />
+      </div>
+    </div>
+
+    <button id="btnAdd" class="btn btn-primary" >Agregar</button>
+  </div>
+</div>
+
+<div class="text-center my-4">
+  <h5>Tabla de deportes registrados</h5>
+  <button id="btnGet" class="btn btn-info mt-3">Consultar</button>
+</div>
+<table class="table w-25 m-auto border">
+  <thead>
+    <tr>
+      <th scope="col">ID#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Precio</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody id="cuerpo"></tbody>
+</table>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div id="modal-content" class="modal-content">
+      <div class="rounded p-4">
+        </form>
+        <div class="form-group row">
+
+          <input type="hidden" id="campoId" name="campoId" value="valor-del-id">
+          <label class="col-sm-2 col-form-label">Nombre</label>
+
+          <div class="col-sm-10">
+            <input id="nombreModal" disabled type="text" class="form-control" name="nombre" />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Precio</label>
+
+          <div class="col-sm-10">
+            <input id="precioModal" type="text" class="form-control" precio="precio" />
+          </div>
+        </div>
+
+        <button id="btnEditar" class="btn btn-warning" >Editar</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h5>Eliminacion de registros</h5>
+<div action="/agregar" class="border rounded p-4">
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">ID</label>
+
+    <div class="col-sm-10">
+      <input id="idDeporte" type="text" class="form-control" name="id" />
+    </div>
+  </div>
+
+  <button id="btnDelete" class="btn btn-danger" >Eliminar</button>
+</div>
+</div>
+
+</body>
